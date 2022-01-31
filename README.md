@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-# SuperDAOcontract
-Build a SuperDAO for The SuperSuperHero AAA GAME
+# MetaverseDAOcontract
+Build a DAO for The SuperSuperHero AAA GAME
 =======
 # Advanced Sample Hardhat Project
 
