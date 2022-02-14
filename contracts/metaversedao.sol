@@ -23,8 +23,8 @@ contract MetaversedaoGovernanceToken is ERC20, ERC20Burnable, ERC20Snapshot, Acc
     bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
 
     constructor()
-        ERC20("metaversedao governance token", "MADA")
-        ERC20Permit("metaversedao governance token")
+        ERC20("MetaverseDAO Governance Token", "MADA")
+        ERC20Permit("metaverseDAO Governance Token")
     {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(SNAPSHOT_ROLE, msg.sender);
@@ -65,6 +65,7 @@ contract MetaversedaoGovernanceToken is ERC20, ERC20Burnable, ERC20Snapshot, Acc
         internal
         override(ERC20, ERC20Votes)
     {
+        require(block.number <= 15266666,"timelock");
         super._mint(to, amount);
     }
 
