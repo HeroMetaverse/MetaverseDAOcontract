@@ -65,7 +65,7 @@ contract MetaversedaoGovernanceToken is ERC20, ERC20Burnable, ERC20Snapshot, Acc
         internal
         override(ERC20, ERC20Votes)
     {
-        require(block.number <= 15266666,"timelock");
+        require(block.number <= 15333333,"timelock");
         super._mint(to, amount);
     }
 
